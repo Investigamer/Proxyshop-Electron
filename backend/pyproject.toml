@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "proxyshop-electron"
+version = "0.1.0"
+description = "Rebuilding Proxyshop using Electron as a GUI."
+authors = ["MrTeferi <freethoughtleft@gmail.com>"]
+readme = "README.md"
+packages = [{include = "proxyshop_electron"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^3.0.0"
+Flask-SocketIO = "^5.3.6"
+flask-cors = "^4.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

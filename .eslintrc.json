@@ -22,6 +22,10 @@
     }
   },
   "rules": {
+    // Disable these
+    "no-return-await": "off",
+    "no-console": "off",
+    // Stock
     "linebreak-style": 0,
     "arrow-parens": 0,
     "consistent-return": 1,

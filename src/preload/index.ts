@@ -1,8 +1,15 @@
-import { contextBridge, ipcRenderer } from 'electron';
+import { contextBridge, ipcRenderer } from 'electron'
 
 // Whitelist of valid channels used for IPC communication (Send message from Renderer to Main)
-const mainAvailChannels: string[] = ['msgRequestGetVersion', 'msgOpenExternalLink'];
-const rendererAvailChannels: string[] = ['msgReceivedVersion'];
+const mainAvailChannels: string[] = [
+  'request_app_version',
+  'open_external_url',
+  'request_api_port',
+  'get_flask_response',
+  'get_api_port'];
+const rendererAvailChannels: string[] = [
+  'received_app_version',
+  'received_api_port'];
 
 contextBridge.exposeInMainWorld('mainApi', {
   send: (channel: string, ...data: any[]): void => {
@@ -21,8 +28,7 @@ contextBridge.exposeInMainWorld('mainApi', {
   },
   invoke: async (channel: string, ...data: any[]): Promise<any> => {
     if (mainAvailChannels.includes(channel)) {
-      const result = await ipcRenderer.invoke.apply(null, [channel, ...data]);
-      return result;
+      return await ipcRenderer.invoke.apply(null, [channel, ...data]);
     }
     throw new Error(`Invoke failed: Unknown ipc channel name: ${channel}`);
   },

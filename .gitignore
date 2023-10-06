@@ -62,3 +62,6 @@ release/
 tests/results/
 .eslintcache
 vite-plugin-electron.log
+
+# Python backend
+backend/.venv
