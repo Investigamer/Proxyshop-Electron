@@ -1,34 +1,17 @@
 <div align="center">
 
-![Retron-logo](src/renderer/public/images/retron-logo.webp)
+# Rebuilding Proxyshop as an Electron App
+### Vite + Electron + React + Material-UI
 
-## Vite + Electron + React + Material-UI Template
-
-> [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/retron/blob/master/LICENSE) ![Programming Language Usage](https://img.shields.io/github/languages/top/jooy2/retron) ![Languages](https://img.shields.io/github/languages/count/jooy2/retron) ![Commit Count](https://img.shields.io/github/commit-activity/y/jooy2/retron) ![github repo size](https://img.shields.io/github/repo-size/jooy2/retron) [![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2) ![Stars](https://img.shields.io/github/stars/jooy2/retron?style=social)
-
-This is a skeleton template for easily creating React-based Electron projects.
-
-It is configured to experience fast development and build speed using **[Vite](https://vitejs.dev)** bundler. As a bonus, it includes several React utilities and layout configurations.
+[![license](https://img.shields.io/badge/license-MPL2.0-blue.svg)](https://github.com/jooy2/retron/blob/master/LICENSE) ![Programming Language Usage](https://img.shields.io/github/languages/top/MrTeferi/Proxyshop-Electron) ![Languages](https://img.shields.io/github/languages/count/MrTeferi/Proxyshop-Electron) ![github repo size](https://img.shields.io/github/repo-size/MrTeferi/Proxyshop-Electron)
 
 </div>
 
-## Advantages of use
+## Advantages of Electron
 
-- ✅ You can build immediately without any presets, so you can develop quickly.
-- ✅ It is being maintained quickly to be compatible with the latest `React` and `Electron`, as well as many modules.
-- ✅ There is no need to worry about layout and data management by using various additional templates.
-
-## Features
-
-- ⚡️ Rapid development through hot-reload
-- ⚡️ Cross-platform development and build support
-- ⚡️ Support for automated application testing
-- ⚡️ TypeScript support
-- ⚡️ Multilingual support
-- ⚡️ Support for themes (dark & light)
-- ⚡️ Basic layout manager
-- ⚡️ Global state management through the Redux store
-- ⚡️ Quick support through the GitHub community
+- ✅ Powerful WebGUI technologies like CSS/SASS, React, Material-UI, Tailwind, etc
+- ✅ Baked-in installer, update system, cross-platform support
+- ✅ Smooth frontend development and maintenance
 
 ## Components
 
@@ -67,42 +50,25 @@ It is configured to experience fast development and build speed using **[Vite](h
 
 ## Installation
 
-You can easily clone a repository with just the npm command. (Recommend)
-
+Clone this repo:
 ```shell
-$ npm init retron
+git clone https://github.com/MrTeferi/Proxyshop-Electron.git
 ```
 
-OR, Click **[Use this template](https://github.com/jooy2/retron/generate)** to instantly create your own project.
-
-OR, Clone this repo using below command.
-
-```shell
-$ git clone https://github.com/jooy2/retron <PROJECT_NAME>
-```
-
-Then, install the dependency module.
-
+Install dependencies:
 ```shell
 # via npm
-$ npm i
-
-# via yarn (https://yarnpkg.com)
-$ yarn install
-
-# via pnpm (https://pnpm.io)
-$ pnpm i
+npm install
 ```
 
-You can test your project in the development environment using the following command:
-
+Test the project:
 ```shell
-$ npm run dev
+npm run dev
 ```
 
 ## Build
 
-**Retron** can build targeting Windows 10 or later, macOS 14.x or later, and major Linux distributions.
+Can build targeting Windows 10 or later, macOS 14.x or later, and major Linux distributions.
 
 ```shell
 # For Windows (.exe, .appx)
@@ -117,18 +83,6 @@ $ npm run build:linux
 
 The built packages can be found in `release/{version}` location.
 
-### Build settings for projects that use Native Node modules
-
-For projects that use the **Native Node Module**, add the following script to your `package.json`: When installing dependencies, `electron-builder` will take care of any modules that require rebuilding.
-
-```json
-{
-  "scripts": {
-    "postinstall": "electron-builder install-app-deps"
-  }
-}
-```
-
 ### What do I need to do for a multi-platform build?
 
 **macOS** is recommended if you want to build multiple platforms simultaneously on one platform. Because it can be configured with just a few very simple settings.
@@ -138,17 +92,3 @@ You can perform multi-platform builds at once with the following command. Altern
 ```shell
 $ npm run build
 ```
-
-## Looking for Electron templates made with Vue?
-
-Also check out the `Vutron` project, which consists of Vite + Vue 3 + Vuetify + Electron.
-
-https://github.com/jooy2/vutron
-
-## Contribute
-
-You can report issues on [GitHub Issue](https://github.com/jooy2/retron/issues). You can also request a pull to fix bugs and add frequently used features.
-
-## License
-
-Copyright © 2021-2023 [Jooy2](https://jooy2.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license.
